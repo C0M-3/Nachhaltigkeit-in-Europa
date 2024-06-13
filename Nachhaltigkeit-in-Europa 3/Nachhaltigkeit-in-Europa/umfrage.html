@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachhaltigkeit in der EU - Umfrage</title>
+    <style>
+        #nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .header {
+            background-color: #003399;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            box-shadow: 0px 6px 6px rgba(6, 6, 6, 0.6);
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .heading {
+            margin-right: 10px;
+        }
+        .logo {
+            height: 3rem;
+        }
+        .container {
+            margin-top: 200px;
+            flex: 1;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-container">  
+        <div class="header">
+            <a href="index.html"><img class="logo" src="Pictures/354-3546804_file-eufor-roundel-svg-eu-logo-png-transparent.png" alt="Logo"></a>
+            <h1 class="heading">Nachhaltigkeit in der EU - Umfrage</h1>
+        </div>
+        <div class="navbar">
+            <a href="#umfragen-header">Umfrage</a>
+            <a href="#ergebnisse">Ergebnisse</a>
+        </div>
+    </div>
+    <div class="container">
+        <h3 id="umfragen-header">Umfrage</h3>
+        <div id="umfrage" class="section iframe-container">
+          <iframe id="survey-frame"src="https://www.menti.com/als31v3kgjb8" frameborder="0" scrolling="yes"></iframe>
+        </div>
+        <h3>Ergebnisse</h3>
+        <div id="ergebnisse" class="section iframe-container">
+            <iframe id="survey-frame" src="https://www.mentimeter.com/app/presentation/alwu1kjs9zcef82gwnmta77wiynko1w6/kc6b9cdats1j" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+    <script>
+        function reloadIframe() {
+            document.getElementById('survey-frame').contentWindow.location.reload();
+        }
+        setInterval(reloadIframe, 200);
+    </script>
+</body>
+</html>
