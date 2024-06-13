@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #474e5d;
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 0; /* Platz für die Navbar wird hier dynamisch hinzugefügt */
+        }
+
+        #nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header {
+            background-color: #003399;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            box-shadow: 0px 6px 6px rgba(6, 6, 6, 0.6);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .heading {
+            margin-right: 10px;
+        }
+
+        .logo {
+            height: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FFCC00;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding-left: 50px;
+                padding-right: 15px;
+            }
+
+            .container::before {
+                left: 40px;
+                border-width: 8px 8px 8px 0;
+            }
+
+            .left::after, .right::after {
+                left: 10px;
+            }
+
+            .content {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar und header -->
+    <div id="nav-container">  
+        <div class="header">
+            <a href="index.html"><img class="logo" src="Pictures/354-3546804_file-eufor-roundel-svg-eu-logo-png-transparent.png"></a>
+            <h1 class="heading">Nachhaltigkeit in der EU</h1>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+        </div>
+    </div>            
+    <div class="timeline">
+      <div class="container left">
+          <div class="content">
+              <h2>2007</h2>
+              <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=celex%3A52007DC0642"><h3>EU-Strategie für nachhaltige Entwicklung</h3></a>
+              <p>Einführung einer integrierten Strategie zur Förderung von Umwelt-, Wirtschafts- und Sozialpolitik.</p>
+          </div>
+      </div>
+      <div class="container right">
+          <div class="content">
+              <h2>2011</h2>
+              <a href="https://www.europarl.europa.eu/meetdocs/2009_2014/documents/com/com_com(2011)0571_/com_com(2011)0571_de.pdf"><h3>Roadmap für ein ressourcenschonendes Europa</h3></a>
+              <p>Festlegung einer langfristigen Strategie zur Verbesserung der Ressourceneffizienz.</p>
+          </div>
+      </div>
+      <div class="container left">
+          <div class="content">
+              <h2>2015</h2>
+              <a href="https://www.bmz.de/de/service/lexikon/klimaabkommen-von-paris-14602"><h3>Klimakonferenz Paris</h3></a>
+              <p>Vereinbarung zur Begrenzung der Erderwärmung auf deutlich unter 2°C.</p>
+          </div>
+      </div>
+      <div class="container right">
+          <div class="content">
+              <h2>2016</h2>
+              <a href="https://finance.ec.europa.eu/publications/high-level-expert-group-sustainable-finance-hleg_en"><h3>High Level Expert Group on Sustainable Finance</h3></a>
+              <p>Einrichtung einer Expertengruppe zur Förderung nachhaltiger Finanzen.</p>
+          </div>
+      </div>
+      <div class="container left">
+          <div class="content">
+              <h2>2019</h2>
+              <a href="https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/european-green-deal_de"><h3>EU Green Deal</h3></a>
+              <p>Umfassende Strategie zur Förderung nachhaltigen Wachstums und zur Erreichung der Klimaneutralität bis 2050.</p>
+          </div>
+      </div>
+      <div class="container right">
+          <div class="content">
+              <h2>2020</h2>
+              <a href="https://www.bafin.de/DE/Aufsicht/SF/TaxonomieVO/TaxanomieVO_node.html"><h3>EU-Taxonomie-Verordnung</h3></a>
+              <p>Festlegung von Kriterien zur Bestimmung nachhaltiger wirtschaftlicher Aktivitäten und Investitionen.</p>
+          </div>
+      </div>
+      <div class="container left">
+          <div class="content">
+              <h2>2021</h2>
+              <a href="https://next-generation-eu.europa.eu/index_de"><h3>Next Generation EU</h3></a>
+              <p>EU-Wiederaufbauplan zur Förderung eines grünen, digitalen und widerstandsfähigen Europas.</p>
+          </div>
+      </div>
+      <div class="container right">
+          <div class="content">
+              <h2>2022</h2>
+              <a href="https://www.bundesregierung.de/breg-de/schwerpunkte/europa/fit-for-55-eu-1942402"><h3>Klimapaket Fit for 55</h3></a>
+              <p>Legislative Maßnahmen zur Erreichung der EU-Klimaziele bis 2030, einschließlich der Reduktion von Treibhausgasemissionen um mindestens 55% im Vergleich zu 1990.</p>
+          </div>
+      </div>
+      <div class="container left">
+          <div class="content">
+              <h2>2023</h2>
+              <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302413"><h3>Renewable Energy Directive (RED III)</h3></a>
+              <p>Neue Richtlinie zur Förderung erneuerbarer Energien und zur Steigerung der Energieeffizienz in der EU.</p>
+          </div>
+      </div>
+      <div class="container right">
+          <div class="content">
+              <h2>2024</h2>
+              <a href="https://environment.ec.europa.eu/strategy/plastics-strategy_en"><h3>Plastics Strategy</h3></a>
+              <p>Strategie zur Reduzierung des Kunststoffverbrauchs und Förderung einer nachhaltigen Kunststoffwirtschaft in der EU.</p>
+          </div>
+      </div>
+  </div>
+  
+    <script>
+        // Dynamisch den Padding-Top des Body einstellen basierend auf der Höhe des Nav-Containers
+        function adjustBodyPadding() {
+            var navHeight = document.getElementById('nav-container').offsetHeight;
+            document.body.style.paddingTop = navHeight + 'px';
+        }
+
+        // Beim Laden und bei Größenänderungen des Fensters ausführen
+        window.addEventListener('load', adjustBodyPadding);
+        window.addEventListener('resize', adjustBodyPadding);
+    </script>
+</body>
+</html>

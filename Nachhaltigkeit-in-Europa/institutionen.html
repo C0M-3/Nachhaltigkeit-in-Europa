@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutionen der EU</title>
+    <style>
+        /* Allgemeine Stile */
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #nav-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    
+    }
+    .header {
+    
+        background-color: #003399;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        box-shadow: 0px 6px 6px rgba(6, 6, 6, 0.6);
+    }
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .heading{
+        margin-right: 10px;
+    }
+    .logo{
+        height: 3rem;
+    }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #0936ff;
+            margin-top: 0;
+        }
+
+        .section p {
+            line-height: 1.8;
+        }
+
+        .source {
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar a {
+                padding: 10px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar und Header -->
+    <div id="nav-container">
+        <div class="header">
+            <a href="index.html"><img class="logo" src="Pictures/354-3546804_file-eufor-roundel-svg-eu-logo-png-transparent.png" alt="EU-Logo"></a>
+            <h1 class="heading">Nachhaltigkeit in Europa</h1>
+        </div>
+        <div class="navbar">
+            <a href="#einleitung">Einleitung</a>
+            <a href="#kommission">Europäische Kommission</a>
+            <a href="#rat">Rat der Europäischen Union</a>
+            <a href="#parlament">Europäisches Parlament</a>
+            <a href="#gericht">Gerichtshof der Europäischen Union</a>
+        </div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div class="container">
+        <div id="einleitung" class="section">
+            <h2>Einleitung zu den Institutionen der EU</h2>
+            <p>
+                Die Europäische Union besteht aus verschiedenen Institutionen, die gemeinsam an der Gesetzgebung, Umsetzung und Durchsetzung der EU-Politiken arbeiten. Jede Institution hat spezifische Aufgaben und Verantwortlichkeiten, die zur Förderung der europäischen Integration und zum Schutz der Interessen der EU-Bürgerinnen und Bürger beitragen.
+            </p>
+            <p class="source">Quelle: Europäische Union</p>
+        </div>
+
+        <div id="kommission" class="section">
+            <h2>Europäische Kommission</h2>
+            <p>
+                Die Europäische Kommission ist das Exekutivorgan der Europäischen Union. Sie ist verantwortlich für die Einhaltung der EU-Verträge und die Umsetzung der EU-Politiken. Die Kommission besteht aus einem Kommissar pro EU-Mitgliedstaat und wird von der Präsidentin oder dem Präsidenten der Kommission geleitet.
+            </p>
+            <p class="source">Quelle: Europäische Kommission</p>
+        </div>
+
+        <div id="rat" class="section">
+            <h2>Rat der Europäischen Union</h2>
+            <p>
+                Der Rat der Europäischen Union, auch bekannt als Ministerrat, repräsentiert die Regierungen der EU-Mitgliedstaaten. Er ist zusammen mit dem Europäischen Parlament an der Gesetzgebung und der Festlegung der EU-Politiken beteiligt. Der Rat tagt in verschiedenen Konfigurationen, abhängig von den behandelten Themen.
+            </p>
+            <p class="source">Quelle: Rat der Europäischen Union</p>
+        </div>
+
+        <div id="parlament" class="section">
+            <h2>Europäisches Parlament</h2>
+            <p>
+                Das Europäische Parlament ist die direkt gewählte Volksvertretung der Europäischen Union. Es vertritt die Interessen der EU-Bürgerinnen und Bürger und spielt eine zentrale Rolle in der Gesetzgebung, der Haushaltskontrolle und der Überwachung der EU-Institutionen. Das Parlament setzt sich aus Abgeordneten aus allen EU-Mitgliedstaaten zusammen.
+            </p>
+            <p class="source">Quelle: Europäisches Parlament</p>
+        </div>
+
+        <div id="gericht" class="section">
+            <h2>Gerichtshof der Europäischen Union</h2>
+            <p>
+                Der Gerichtshof der Europäischen Union (EuGH) ist das höchste Gericht der Europäischen Union. Er gewährleistet die Einhaltung des EU-Rechts und entscheidet über Rechtsstreitigkeiten zwischen EU-Institutionen, Mitgliedstaaten, Unternehmen und Einzelpersonen. Der EuGH besteht aus Richterinnen und Richtern aus jedem EU-Mitgliedstaat.
+            </p>
+            <p class="source">Quelle: Gerichtshof der Europäischen Union</p>
+        </div>
+    </div>
+    <script>
+        // Dynamisch den Padding-Top des Body einstellen basierend auf der Höhe des Nav-Containers
+        function adjustBodyPadding() {
+            var navHeight = document.getElementById('nav-container').offsetHeight;
+            document.body.style.paddingTop = navHeight + 'px';
+        }
+
+        // Beim Laden und bei Größenänderungen des Fensters ausführen
+        window.addEventListener('load', adjustBodyPadding);
+        window.addEventListener('resize', adjustBodyPadding);
+    </script>
+</body>
+</html>
